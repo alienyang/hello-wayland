@@ -49,8 +49,8 @@
 #define MIN(a,b) (((a)<(b))?(a):(b))
 //#define ARRAY_LENGTH(x) (sizeof(x)/sizeof((x)[0]))
 
-static const int width = 128;
-static const int height = 128;
+static const int width = 512;
+static const int height = 512;
 
 static int running = 1;
 static const struct wl_pointer_listener pointer_listener;
@@ -803,8 +803,8 @@ int main(int argc, char *argv[]) {
 
 	window.display = &display;
 	display.window = &window;
-	window.geometry.width  = 250;
-	window.geometry.height = 250;
+	window.geometry.width  = width;
+	window.geometry.height = height;
 	window.window_size = window.geometry;
 	window.buffer_size = 32;
 	window.frame_sync = 1;
